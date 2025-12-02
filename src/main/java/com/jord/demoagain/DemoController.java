@@ -10,11 +10,14 @@ public class DemoController {
     public String greeting(Model mod){
         String name = "Jordan";
         mod.addAttribute("name", name);
+        mod.addAttribute("className", "Java");
+        mod.addAttribute("classCode", 2545);
         return "Hello";
     }
 
     @GetMapping("/about")
-    public String about(){
+    public String about(Model mod){
+        mod.addAttribute("age", 18);
         return "About";
     }
 
